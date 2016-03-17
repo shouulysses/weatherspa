@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <h3 class="panel-heading">{{ convertDateFunction({ date: weatherObject.dt }) | date: dateFormat }}</h3>   
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+                Weather: {{ weatherObject.weather[0].main }} <img ng-src= "{{ getImageFunction({ img: weatherObject.weather[0].icon }) }}" />
+            </div>
+            <div class="col-md-4">
+                Humidity: {{ weatherObject.humidity }}%
+            </div>
+        </div>
+        <hr />
+        <div class="col-md-4">
+            Daytime temperature: {{ convertToCFunction({ deg: weatherObject.temp.day }) }}°C/ {{ convertToFFunction({ deg: weatherObject.temp.day }) }}°F
+        </div>
+        <div class="col-md-4">
+            Maximum temperature: {{ convertToCFunction({ deg: weatherObject.temp.max }) }}°C/ {{ convertToFFunction({ deg: weatherObject.temp.max }) }}°F
+        </div>
+        <div class="col-md-4">
+            Minimum temperature: {{ convertToCFunction({ deg: weatherObject.temp.min }) }}°C/ {{ convertToFFunction({ deg: weatherObject.temp.min }) }}°F
+        </div>
+    </div>
+</div>

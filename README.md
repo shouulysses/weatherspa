@@ -1,1 +1,1 @@
-First app linking openweather api to see weather forecast
+NodeJS + AngularJS app linking openweather api to see weather forecast 
